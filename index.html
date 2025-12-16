@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KaffeK Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <main class="page">
+        <div class="hero">
+            <header class="brand">
+                <img src="images/logo.png" alt="KaffeK logo" class="logo" />
+            </header>
+            <section class="intro">
+                <h1>Find den bedste kaffe til dine behov</h1>
+                <p>Brug vores kaffe-guide til at finde kaffen, der matcher dine præferencer</p>
+            </section>
+
+            <form class="search-card" autocomplete="off">
+                <label class="sr-only" for="coffee-search">Søg i kaffe</label>
+                <input id="coffee-search" name="search" type="search" placeholder="Søg i kaffe" />
+
+                <div class="field">
+                    <div class="field-label">Styrke</div>
+                    <div class="bean-row">
+                        <div class="beans" role="radiogroup" aria-label="Vælg styrke">
+                            <!-- 10 bønner for styrke -->
+                            <button type="button" class="bean" data-value="1" aria-label="Styrke 1">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="2" aria-label="Styrke 2">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="3" aria-label="Styrke 3">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="4" aria-label="Styrke 4">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="5" aria-label="Styrke 5">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="6" aria-label="Styrke 6">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="7" aria-label="Styrke 7">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="8" aria-label="Styrke 8">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="9" aria-label="Styrke 9">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                            <button type="button" class="bean" data-value="10" aria-label="Styrke 10">
+                                <img src="images/bean-ikon.png" alt="" aria-hidden="true" />
+                            </button>
+                        </div>
+                        <span class="bean-count" aria-live="polite">0/10</span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="field-label">Aroma</div>
+                    <div class="tags" aria-label="Vælg aroma">
+                        <button type="button" class="tag" data-tag="karamel">Karamel</button>
+                        <button type="button" class="tag" data-tag="vanilje">Vanilje</button>
+                        <button type="button" class="tag" data-tag="mandel">Mandel</button>
+                        <button type="button" class="tag" data-tag="frugt">Frugt</button>
+                        <button type="button" class="tag" data-tag="mælk">Mælk</button>
+                    </div>
+                </div>
+
+                <a class="more" href="#filters" id="more-filters">Flere filtre ↓</a>
+                
+                <div class="expanded-filters" id="expanded-filters" style="display: none;">
+                    <div class="filter-grid">
+                        <div class="filter-section">
+                            <div class="filter-section-header">
+                                <div class="field-label">Maskintype / System</div>
+                            </div>
+                            <div class="filter-dropdown-list">
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="Nespresso">Nespresso</button>
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="Dolce Gusto">Dolce Gusto</button>
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="Tassimo">Tassimo</button>
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="Senseo">Senseo</button>
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="ESE pads">ESE pads</button>
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="Filterkaffe">Filterkaffe</button>
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="Hele bønner">Hele bønner</button>
+                                <button type="button" class="filter-list-item" data-filter-type="machine" data-value="Formalet kaffe">Formalet kaffe</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-section">
+                            <div class="filter-section-header">
+                                <div class="field-label">Kategori / Produkttype</div>
+                            </div>
+                            <div class="filter-dropdown-list">
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Espresso">Espresso</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Lungo">Lungo</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Ristretto">Ristretto</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Cappuccino">Cappuccino</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Latte">Latte</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Flat White">Flat White</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Macchiato">Macchiato</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Americano">Americano</button>
+                                <button type="button" class="filter-list-item" data-filter-type="category" data-value="Instant kaffe">Instant kaffe</button>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-section-group">
+                            <div class="filter-section">
+                                <div class="field-label">Pris og budget</div>
+                                <div class="price-inputs">
+                                    <input type="number" class="price-input" placeholder="Min pris." name="min-price" />
+                                    <span class="price-connector">↔</span>
+                                    <input type="number" class="price-input" placeholder="Max pris." name="max-price" />
+                                </div>
+                            </div>
+                            <div class="filter-section">
+                                <div class="field-label">Ristningsgrad</div>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ristningsgrad" value="lys" />
+                                        <span>Lys</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ristningsgrad" value="medium" />
+                                        <span>Medium</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ristningsgrad" value="mørk" />
+                                        <span>Mørk</span>
+                                    </label>
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="ristningsgrad" value="ekstra-mørk" />
+                                        <span>Ekstra mørk</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="filter-section">
+                            <div class="filter-section-header">
+                                <div class="field-label">Oprindelsesland / region</div>
+                            </div>
+                            <div class="filter-dropdown-list">
+                                <button type="button" class="filter-list-item" data-filter-type="origin" data-value="Brasilien">Brasilien <img src="images/flag 1.png" alt="Brasilien flag" class="country-flag" /></button>
+                                <button type="button" class="filter-list-item" data-filter-type="origin" data-value="Colombia">Colombia <img src="images/colombia 1.png" alt="Colombia flag" class="country-flag" /></button>
+                                <button type="button" class="filter-list-item" data-filter-type="origin" data-value="Honduras">Honduras <img src="images/honduras 1.png" alt="Honduras flag" class="country-flag" /></button>
+                                <button type="button" class="filter-list-item" data-filter-type="origin" data-value="Etiopien">Etiopien <img src="images/ethiopia 1.png" alt="Etiopien flag" class="country-flag" /></button>
+                                <button type="button" class="filter-list-item" data-filter-type="origin" data-value="Guatemala">Guatemala <img src="images/guatemala 1.png" alt="Guatemala flag" class="country-flag" /></button>
+                                <button type="button" class="filter-list-item" data-filter-type="origin" data-value="Vietnam">Vietnam <img src="images/vietnam 1.png" alt="Vietnam flag" class="country-flag" /></button>
+                                <button type="button" class="filter-list-item" data-filter-type="origin" data-value="Blend">Blend <img src="images/earth 1.png" alt="Blend" class="country-flag" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="hero-visual">
+            <div class="cup-container" id="cup-container">
+                <div class="steam">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="cup-wrapper">
+                    <img class="cup-img" src="images/coffee-cup.png" alt="Kaffekop illustration" />
+                    <img class="cup-beans" src="images/cup-beans.png" alt="Kaffebønner illustration" />
+                </div>
+            </div>
+            <button class="cta" type="button">Find Kaffe</button>
+            
+            <div class="results-container" id="results-container" style="display: none;">
+                <div class="results-header">
+                    <h2>Dine valgte filtre</h2>
+                    <button type="button" class="clear-all-btn" id="clear-all-btn">Ryd alle</button>
+                </div>
+                <div class="results-content" id="results-content">
+                    <!-- Filter results will be displayed here -->
+                </div>
+                <div class="results-summary" id="results-summary">
+                    <p>Ingen filtre valgt endnu</p>
+                </div>
+                
+                <div class="coffee-results" id="coffee-results" style="display: none;">
+                    <div class="coffee-results-header">
+                        <h3>Kaffe resultater</h3>
+                        <span class="results-count" id="results-count">0 resultater</span>
+                    </div>
+                    <div class="coffee-list" id="coffee-list">
+                        <!-- Coffee resultater display -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
